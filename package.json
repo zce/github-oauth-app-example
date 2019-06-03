@@ -1,0 +1,43 @@
+{
+  "name": "oauth2-client-examples",
+  "version": "0.1.0",
+  "description": "An example node application that implements GitHub OAuth2 API.",
+  "keywords": [
+    "oauth2-client-examples",
+    "zce"
+  ],
+  "homepage": "https://github.com/zce/oauth2-client-examples#readme",
+  "bugs": {
+    "url": "https://github.com/zce/oauth2-client-examples/issues"
+  },
+  "license": "MIT",
+  "author": "zce <w@zce.me> (https://zce.me)",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/oauth2-client-examples.git"
+  },
+  "scripts": {
+    "lint": "standard --fix",
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}

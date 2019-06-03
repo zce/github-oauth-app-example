@@ -1,0 +1,57 @@
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title My Application
+    link(rel='stylesheet', href='https://unpkg.com/normalize.css')
+    link(rel='stylesheet', href='https://unpkg.com/minima.css')
+    style.
+      .site-header {
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .site-main {
+        display: flex;
+        align-items: center;
+        height: 70vh;
+      }
+
+      .site-login {
+        max-width: 32rem;
+        margin: 0 auto;
+        padding: 3rem 4rem;
+        background: #f8f9fb;
+        box-shadow: 0 0 1rem #ccc;
+        border-radius: 0.5rem;
+      }
+
+      .site-login > .button {
+        display: block;
+      }
+
+  body
+    header.site-header
+      .container
+        h1 My Application
+    main.site-main
+      section.container
+        .site-login
+          h2 Sign in
+          p Sign in with social media account.
+          a#btn_login_github.button(href='javascript:;') Sign in with GitHub
+    script.
+      const btnLogin = document.querySelector('#btn_login_github')
+      btnLogin.addEventListener('click', () => {
+        const query = new URLSearchParams({
+          client_id: '#{clientId}',
+          redirect_uri: '#{redirectUri}',
+          response_type: 'code',
+          scope: '#{scope}',
+          state: '#{state}'
+        })
+        const url = `#{authorizeUri}?${query}`
+        //- window.open(url, 'github-oauth2-authorize')
+        window.location.href = url
+      })

@@ -1,0 +1,28 @@
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title My Application
+    link(rel='stylesheet', href='https://unpkg.com/normalize.css')
+    link(rel='stylesheet', href='https://unpkg.com/minima.css')
+    style.
+      .site-header {
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        border-bottom: 1px solid #eee;
+      }
+      .site-main > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 480px;
+        height: 75vh;
+      }
+  body
+    header.site-header
+      .container
+        h1 My Application
+    main.site-main
+      section.container
+        p Welcome, #{user.name}
