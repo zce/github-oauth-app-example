@@ -34,7 +34,7 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
-    "nodemon": "1.19.1",
+    "nodemon": "1.19.2",
     "standard": "14.1.0"
   },
   "engines": {
